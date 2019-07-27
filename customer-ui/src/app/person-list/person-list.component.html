@@ -1,0 +1,20 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container"
+     infiniteScroll
+     [infiniteScrollDistance]="1"
+     [infiniteScrollThrottle]="300"
+     (scrolled)="onScroll()"
+     >
+  <div class="row">
+    <div class="col-4 card" *ngFor="let person of persons">
+        <div class="card-block">
+          <h4 class="card-title">{{person.firstName}}</h4>
+          <p class="card-text">{{person.lastName}}</p>
+        </div>
+    </div>
+  </div>
+</div>
